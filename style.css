@@ -1,0 +1,139 @@
+:root {
+    --clr-primary: hsl(245, 75%, 52%);
+    --clr-secondary: hsl(225, 100%, 94%);
+
+    --clr-neutral-800: hsl(223, 47%, 23%);
+    --clr-neutral-600: hsl(224, 23%, 55%);
+    --clr-netural-400: hsl(225, 100%, 98%);
+
+    --font-weight-bold: 900;
+    --font-weight-semibold: 700;
+    --font-weight-normal: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img, button {
+    display: block;
+}
+
+body {
+    font-family: "Red Hat Display", serif;
+    background: url(images/pattern-background-desktop.svg);
+    min-height: 100vh;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 350px;
+    background-color: var(--clr-netural-400);
+    border-radius: 15px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+main:hover {
+    transform: translateY(-7px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header img{
+    width: 100%;
+    object-position: center;
+}
+
+.summary {
+    padding: 1.5rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--clr-neutral-800);
+}
+
+.summary > p {
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    color: var(--clr-neutral-600);
+    padding: .5rem;
+    text-align: center;
+}
+
+.plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.plan-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.plan-info div p{
+    color: var(--clr-neutral-600);
+    font-weight: var(--font-weight-semibold);
+}
+
+strong {
+    font-weight: var(--font-weight-bold);
+}
+
+.plan > p {
+    color: var(--clr-primary);
+    font-weight: var(--font-weight-semibold);
+}  
+
+.plan > p:hover {
+    color: var(--clr-neutral-600);
+    cursor: pointer;
+}   
+
+button {
+    width: 100%;
+    padding: .75rem;
+    border-radius: .5rem;
+    border: none;
+    font-size: .8rem;
+    font-weight: var(--font-weight-semibold);
+}
+
+.payment {
+    color: var(--clr-secondary);
+    background-color: var(--clr-primary);
+    margin-bottom: .5rem;
+}
+
+.payment:hover {
+    background-color: var(--clr-neutral-600);
+    cursor: pointer;
+}
+
+.cancel {
+    color: var(--clr-neutral-600);
+}
+
+.cancel:hover {
+    color: var(--clr-neutral-800);
+    cursor: pointer;
+}
+
+@media (max-width: 350px) {
+
+    .plan{
+        font-size: .85rem
+    }
+}
